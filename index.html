@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server Admin</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #1f2937; /* Dark background */
+      }
+    </style>
+  </head>
+  <body class="text-white">
+    <!-- Navbar -->
+    <nav class="bg-dark-100 dark:bg-gray-900 dark:text-white">
+      <div class="container flex justify-between items-center p-4 mx-auto">
+        <a href="#" class="text-2xl font-semibold dark:text-white"
+          >Server Admin</a
+        >
+        <button
+          data-collapse-toggle="navbar"
+          type="button"
+          class="md:hidden text-gray-500 focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+          aria-controls="navbar"
+        >
+          <svg
+            class="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <div class="hidden md:flex space-x-6" id="navbar">
+          <a href="/" class="text-white-900 dark:text-white"
+            >Home</a
+          >
+          <a
+            target="_blank"
+            href="/projects"
+            class="text-white-900 dark:text-white"
+            >View Database</a
+          >
+          <a href="/contact" class="text-white-900 dark:text-white"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-10">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold">Welcome to Server Admin</h1>
+        <p class="mt-4 text-lg text-gray-300">
+          Manage and view your server data easily from this admin panel.
+        </p>
+      </div>
+
+      <!-- Input Form -->
+      <div class="bg-gray-800 p-8 mt-10 rounded-lg shadow-lg max-w-xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6">Add Project Data</h2>
+        <form action="/getData" method="POST">
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium">Thumbnail Link</label>
+            <input
+              type="text"
+              name="thumbnail"
+              class="w-full p-2 text-gray-900 border rounded-lg focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Enter the thumbnail link"
+            />
+          </div>
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium">Title</label>
+            <input
+              type="text"
+              name="title"
+              class="w-full p-2 text-gray-900 border rounded-lg focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Enter the title"
+            />
+          </div>
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium">Description</label>
+            <input
+              type="text"
+              name="description"
+              class="w-full p-2 text-gray-900 border rounded-lg focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Enter the description"
+            />
+          </div>
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium">Github Link</label>
+            <input
+              type="text"
+              name="github"
+              class="w-full p-2 text-gray-900 border rounded-lg focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Enter the GitHub link"
+            />
+          </div>
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium">Demo Link</label>
+            <input
+              type="text"
+              name="demo"
+              class="w-full p-2 text-gray-900 border rounded-lg focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Enter the demo link"
+            />
+          </div>
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium">Is Blog</label>
+            <input
+              type="text"
+              name="isBlog"
+              class="w-full p-2 text-gray-900 border rounded-lg focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Enter 'true' or 'false'"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full py-2.5 px-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
